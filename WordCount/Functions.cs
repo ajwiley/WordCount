@@ -18,7 +18,7 @@ namespace WordCount {
                 if (c == ' ' || c == '\t' || c == '\n') {
                     num += 1;
                 }
-                else if (reg.IsMatch(c.ToString()) && lastValue == ' ') { // Words must be valid (aka only a-zA-Z), but only if there is a space afterwards
+                else if (reg.IsMatch(c.ToString()) && lastValue == ' ') { // Words must be valid (aka only a-zA-Z), but only if there is a space afterwards 
                     num -= 1;
                 }
 
@@ -36,7 +36,7 @@ namespace WordCount {
             }
 
             // If the user has one char that and it is a space, tab, or newline, set the count to 0.
-            if (para.Length == 1 && para.Contains(' ') || para.Contains('\t') || para.Contains('\n')) {
+            if (para.Length == 1 && para.Contains(' ') || para.Contains('\t')) {
                 num = 0;
             }
             
